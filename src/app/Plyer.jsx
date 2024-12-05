@@ -1,0 +1,32 @@
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardActions from '@mui/material/CardActions';
+
+export default function MultiActionAreaCard({name,time,imge}) {
+  return (
+    <Card   style={{marginTop:"40px",width:"250px"}}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="160"
+          image={imge}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+           {name}
+          </Typography>
+          <h1 variant="body2" sx={{ color: 'text.secondary' }}>
+           {time}
+          </h1>
+        </CardContent>
+      </CardActionArea>
+   
+    </Card>
+  );
+}
